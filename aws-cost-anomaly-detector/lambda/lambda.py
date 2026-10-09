@@ -3,7 +3,7 @@ from datetime import date, timedelta
 
 import boto3
 
-ce = boto3.client("ce", region_name="us-east-1")
+ce = boto3.client("ce", region_name="eu-north-1")
 sns = boto3.client("sns")
 
 TOPIC_ARN = os.environ["SNS_TOPIC_ARN"]
