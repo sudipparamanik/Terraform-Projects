@@ -6,7 +6,7 @@ data "archive_file" "lambda_zip" {
 resource "aws_lambda_function" "cost_checker" {
   function_name    = "cost-anomaly-detector"
   role             = aws_iam_role.lambda.arn
-  handler          = "handler.lambda_handler"
+  handler          = "lambda.lambda_handler"
   runtime          = "python3.12"
   timeout          = 30
   filename         = data.archive_file.lambda_zip.output_path
